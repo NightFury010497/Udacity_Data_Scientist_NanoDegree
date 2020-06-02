@@ -17,6 +17,7 @@ from sklearn.multiclass import OneVsRestClassifier
 from sklearn.svm import LinearSVC
 
 def load_data(database_filepath):
+    '''In this function we are loading the data from the database.'''
     engine = create_engine('sqlite:///'+ database_filepath)
     df = pd.read_sql_table('FigureEight', engine)
     X = df.message.values
@@ -25,6 +26,7 @@ def load_data(database_filepath):
     return X, Y, category_names
 
 def tokenize(text):
+    ''' Tokenizing the text received.'''
     text = re.sub(r"[^a-zA-Z0-9]", " ", text.lower())
     tokens = word_tokenize(text)
     lemmatizer = WordNetLemmatizer()
@@ -37,6 +39,8 @@ def tokenize(text):
 
 
 def build_model():
+    '''creating pipelines to parse the TEXT, It will be passed through
+    various pipelines to tokenize, transform and generate output'''
     pipeline = Pipeline([
         ('vect', CountVectorizer(tokenizer=tokenize)),
         ('tfidf', TfidfTransformer()),
@@ -50,16 +54,19 @@ def build_model():
     return cv
 
 def evaluate_model(model, X_test, Y_test, category_names):
+    ''' Model Evaluation function'''
     Y_pred = model.predict(X_test)
     print(classification_report(Y_test, Y_pred, target_names = category_names))
     for i in range(Y_test.shape[1]):
         print('%25s accuracy : %.2f' %(category_names[i], accuracy_score(Y_test[:,i], Y_pred[:,i])))
 
 def save_model(model, model_filepath):
+    '''To save the model.'''
     joblib.dump(model, model_filepath)
 
 
 def main():
+    '''To pass the Path to Database and Model. '''
     if len(sys.argv) == 3:
         database_filepath, model_filepath = sys.argv[1:]
         print('Loading data...\n    DATABASE: {}'.format(database_filepath))
