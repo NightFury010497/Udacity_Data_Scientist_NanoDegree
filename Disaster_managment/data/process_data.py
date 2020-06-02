@@ -3,12 +3,16 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 def load_data(messages_filepath, categories_filepath):
+    ''' This function help us to load the data from files which we are
+    importing, the files are ingested from function parameters.
+    '''
     messages = pd.read_csv(messages_filepath)
     categories = pd.read_csv(categories_filepath)
     df = pd.merge(messages, categories, left_on='id', right_on='id', how='outer')
     return df
 
 def clean_data(df):
+    ''' In this function are job is to clean the data.'''
     categories = df.categories.str.split(';', expand = True)
     row = categories.loc[0]
     category_colnames = row.apply(lambda x: x[:-2]).values.tolist()
@@ -23,10 +27,13 @@ def clean_data(df):
     return df
 
 def save_data(df, database_filepath):
+    ''' In this function we are linking our datafram to  the sqlite and saving the database.'''
     engine = create_engine('sqlite:///' + database_filepath)
     df.to_sql('FigureEight', engine, index=False)
 
 def main():
+    ''' This functions aims to grab the paths of files and the path where database needs to be stored.
+    '''
     if len(sys.argv) == 4:
 
         messages_filepath, categories_filepath, database_filepath = sys.argv[1:]
