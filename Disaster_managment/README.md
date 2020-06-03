@@ -22,7 +22,9 @@ To run the Web app:
     python run.py
     go to- http://127.0.0.1:5000
 Disaster Management Project  
-![image](https://user-images.githubusercontent.com/56355704/83689662-0a8cb280-a60d-11ea-8d01-be36309f2b0f.png)
+![image](https://user-images.githubusercontent.com/56355704/83690530-8a674c80-a60e-11ea-8b74-6a3e98035e2f.png)
+![image](https://user-images.githubusercontent.com/56355704/83690593-9f43e000-a60e-11ea-950e-ac6561df53dd.png)
+
 
 Input:
 ![image](https://user-images.githubusercontent.com/56355704/83689371-8c301080-a60c-11ea-9593-8f3af9f986df.png)
