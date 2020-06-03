@@ -22,8 +22,11 @@ To run the Web app:
     python run.py
     go to- http://127.0.0.1:5000
 
+Input:
+![image](https://user-images.githubusercontent.com/56355704/83689371-8c301080-a60c-11ea-9593-8f3af9f986df.png)
 
 Output:  
 
-![image](https://user-images.githubusercontent.com/56355704/83302150-6f649900-a218-11ea-87f0-30c50b056242.png)
+![image](https://user-images.githubusercontent.com/56355704/83689340-7e7a8b00-a60c-11ea-88ef-9021e2faa61d.png)
+
 
