@@ -1,6 +1,7 @@
 ># Project Face Recognition!
-![3](https://user-images.githubusercontent.com/56355704/84321970-d4fa4300-ab91-11ea-8fc5-b0417c18e7c7.gif)
-
+![3](https://user-images.githubusercontent.com/56355704/84321970-d4fa4300-ab91-11ea-8fc5-b0417c18e7c7.gif)  
+# [BLOG](https://medium.com/@nightfury010497/nano-degree-735ef9c6563b?source=friends_link&sk=d96dfc21b36360058d87061ac8dfc98c)  
+# [REPOSITORY](https://github.com/NightFury010497/Udacity_Data_Scientist_NanoDegree/tree/master/First_Blog)  
 >## Libraries 
 pip install -r requirements.txt  
 ### Project motivation  
