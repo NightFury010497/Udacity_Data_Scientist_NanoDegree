@@ -14,7 +14,7 @@ Delhi,India : Facial recognition system helps trace 3,000 missing children in ju
 ### Acknowledgements 
  - Udacity
  - Medium
- - Google Colab
-LINK TO REFER: 
-https://medium.com/@nightfury010497/nano-degree-735ef9c6563b?source=friends_link&sk=d96dfc21b36360058d87061ac8dfc98c
+ - Google Colab  
+LINK TO REFER:   
+https://medium.com/@nightfury010497/nano-degree-735ef9c6563b?source=friends_link&sk=d96dfc21b36360058d87061ac8dfc98c  
 please LIKE, SHARE and CLAP!
